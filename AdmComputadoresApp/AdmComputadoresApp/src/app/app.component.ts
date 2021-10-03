@@ -51,7 +51,7 @@ export class AppComponent {
      if (this.ComputadorForm.invalid) {  
             return;  
      }  
-    this.AppService.postData(this.ComputadorForm.value).subscribe((data) => {  
+    this.AppService.postData(this.ComputadorForm.value).subscribe((data: any[]) => {  
       this.data = data;  
       this.resetFrom();   
     })  
@@ -62,14 +62,14 @@ export class AppComponent {
     if (this.ComputadorForm.invalid) {  
      return;  
     }        
-    this.AppService.putData(this.ComputadorForm.value.PagamentoId,
-             this.ComputadorForm.value).subscribe((data) => {  
+    this.AppService.putData(this.ComputadorForm.value.ComputadorId,
+             this.ComputadorForm.value).subscribe((data: any[]) => {  
       this.data = data;  
       this.resetFrom();  
     })  
   }  
   
-  EditData(Data: any) {  
+  EditData(Data) {  
     this.ComputadorForm.controls["ComputadorId"].setValue(Data.ComputadorId);  
     this.ComputadorForm.controls["Marca"].setValue(Data.Marca);      
     this.ComputadorForm.controls["Modelo"].setValue(Data.Modelo);  

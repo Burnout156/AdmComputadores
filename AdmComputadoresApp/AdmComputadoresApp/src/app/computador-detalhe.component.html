@@ -1,0 +1,117 @@
+<form #form="ngForm" autocomplete="off">
+    <input type="hidden" name="ComputadorId" [value]="service.formData.ComputadorId">
+    
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-user-circle" [class.green-icon]="Marca.valid" [class.red-icon]="Marca.invalid && Marca.touched"></i>
+          </div>
+        </div>
+        <input name="Marca" #NomeTitular="ngModel" [(ngModel)]="service.formData.Marca" class="form-control"
+          placeholder="Marca" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="far fa-credit-card"  [class.green-icon]="Modelo.valid" [class.red-icon]="Modelo.invalid && Modelo.touched"></i>
+          </div>
+        </div>
+        <input name="Modelo" #NumeroCartao="ngModel" [(ngModel)]="service.formData.Modelo"
+        class="form-control" placeholder="Modelo" required maxlength="16" minlength="16">
+      </div>
+    </div>
+
+    <div class="form-row">
+      
+        <div class="form-group col-md-7">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="fas fa-calendar-alt"  [class.green-icon]="PlacaMae.valid" [class.red-icon]="PlacaMae.invalid && PlacaMae.touched"></i>
+            </div>
+          </div>
+          <input name="PlacaMae" #ExpirationDate="ngModel" [(ngModel)]="service.formData.PlacaMae" class="form-control"
+            placeholder="Placa Mãe" required maxlength="5" minlength="5">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="far fa-credit-card"  [class.green-icon]="MemoriaRAM.valid" [class.red-icon]="MemoriaRAM.invalid && MemoriaRAM.touched"></i>
+            </div>
+          </div>
+          <input name="MemoriaRAM" #NumeroCartao="ngModel" [(ngModel)]="service.formData.MemoriaRAM"
+          class="form-control" placeholder="MemoriaRAM" required maxlength="16" minlength="16">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="far fa-credit-card"  [class.green-icon]="MemoriaRAM.valid" [class.red-icon]="MemoriaRAM.invalid && MemoriaRAM.touched"></i>
+            </div>
+          </div>
+          <input name="MemoriaRAM" #NumeroCartao="ngModel" [(ngModel)]="service.formData.MemoriaRAM"
+          class="form-control" placeholder="MemoriaRAM" required maxlength="16" minlength="16">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="far fa-credit-card"  [class.green-icon]="HD.valid" [class.red-icon]="HD.invalid && HD.touched"></i>
+            </div>
+          </div>
+          <input name="HD" #NumeroCartao="ngModel" [(ngModel)]="service.formData.HD"
+          class="form-control" placeholder="HD" required maxlength="16" minlength="16">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="far fa-credit-card"  [class.green-icon]="MarcaHD.valid" [class.red-icon]="MarcaHD.invalid && MarcaHD.touched"></i>
+            </div>
+          </div>
+          <input name="HD" #NumeroCartao="ngModel" [(ngModel)]="service.formData.MarcaHD"
+          class="form-control" placeholder="MarcaHD" required maxlength="16" minlength="16">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="far fa-credit-card"  [class.green-icon]="VelocidadeProcessador.valid" [class.red-icon]="VelocidadeProcessador.invalid && VelocidadeProcessador.touched"></i>
+            </div>
+          </div>
+          <input name="HD" #NumeroCartao="ngModel" [(ngModel)]="service.formData.VelocidadeProcessador"
+          class="form-control" placeholder="VelocidadeProcessador" required maxlength="16" minlength="16">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="far fa-credit-card"  [class.green-icon]="Foto.valid" [class.red-icon]="Foto.invalid && Foto.touched"></i>
+            </div>
+          </div>
+          <input name="Foto" #NumeroCartao="ngModel" [(ngModel)]="service.formData.Foto"
+          class="form-control" placeholder="Foto" required maxlength="16" minlength="16">
+        </div>
+      </div>
+
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i class="fas fa-database"></i> Submeter</button>
+    </div>
+  </form>

@@ -387,9 +387,9 @@
         <tr>  
           <td>MarcaHD</td>  
           <td>  
-            <input type="text" formControlName="marcaHD">  
-            <div *ngIf="submitted && ComputadorForm.controls.marcaHD.errors" class="text-danger">  
-              <div *ngIf="ComputadorForm.controls.marcaHD.errors.required">O MarcaHD é obrigatório</div>  
+            <input type="text" formControlName="MarcaHD">  
+            <div *ngIf="submitted && ComputadorForm.controls.MarcaHD.errors" class="text-danger">  
+              <div *ngIf="ComputadorForm.controls.MarcaHD.errors.required">O MarcaHD é obrigatório</div>  
             </div>  
           </td>  
         </tr> 
@@ -397,9 +397,9 @@
         <tr>  
           <td>VelocidadeProcessador</td>  
           <td>  
-            <input type="text" formControlName="velocidadeProcessador">  
-            <div *ngIf="submitted && ComputadorForm.controls.velocidadeProcessador.errors" class="text-danger">  
-              <div *ngIf="ComputadorForm.controls.velocidadeProcessador.errors.required">O VelocidadeProcessador é obrigatório</div>  
+            <input type="text" formControlName="VelocidadeProcessador">  
+            <div *ngIf="submitted && ComputadorForm.controls.VelocidadeProcessador.errors" class="text-danger">  
+              <div *ngIf="ComputadorForm.controls.VelocidadeProcessador.errors.required">O VelocidadeProcessador é obrigatório</div>  
             </div>  
           </td>  
         </tr> 
@@ -407,9 +407,9 @@
         <tr>  
           <td>Foto</td>  
           <td>  
-            <input type="text" formControlName="foto">  
-            <div *ngIf="submitted && ComputadorForm.controls.foto.errors" class="text-danger">  
-              <div *ngIf="ComputadorForm.controls.foto.errors.required">O Foto é obrigatório</div>  
+            <input type="text" formControlName="Foto">  
+            <div *ngIf="submitted && ComputadorForm.controls.Foto.errors" class="text-danger">  
+              <div *ngIf="ComputadorForm.controls.Foto.errors.required">O Foto é obrigatório</div>  
             </div>  
           </td>  
         </tr> 
@@ -450,7 +450,7 @@
           <td>{{d.velocidadeProcessador}}</td>  
           <td>{{d.foto}}</td>  
           <td><a (click)="EditData(d)" class="btn btn-warning">Editar</a></td>  
-          <td><a (click)="deleteData(d.ComputadorId)" class="btn btn-danger">Deletar</a></td>    
+          <td><a (click)="deleteData(d.computadorId)" class="btn btn-danger">Deletar</a></td>    
         </tr>  
 
       </table>  
