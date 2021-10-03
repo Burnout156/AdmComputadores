@@ -8,11 +8,13 @@ import { HttpClient,HttpHeaders }    from '@angular/common/http';
 export class AppService 
 {
 
-  readonly rootURL = 'http://localhost:44329/api';
+  readonly rootURL = 'https://localhost:44329/api';
 
   constructor(private http: HttpClient) { }   
-      httpOptions = {  
-        headers: new HttpHeaders({  
+      httpOptions = 
+      {  
+        headers: new HttpHeaders(
+        {  
           'Content-Type': 'application/json'  
         })  
       }    
@@ -21,15 +23,15 @@ export class AppService
         return this.http.get(this.rootURL + '/Computadores'); 
       }  
 
-      postData(formData: any){  
+      postData(formData){  
         return this.http.post(this.rootURL + '/Computadores',formData);  
       }  
 
-      putData(id: number,formData: any){  
+      putData(id,formData){  
         return this.http.put(this.rootURL + '/Computadores/'+id,formData);  
       }  
 
-      deleteData(id: number){  
+      deleteData(id){  
         return this.http.delete(this.rootURL + '/Computadores/'+id);  
       }  
 }

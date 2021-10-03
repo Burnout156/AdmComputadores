@@ -328,7 +328,8 @@
 <div class="content" role="main">
 
   <div class="container">  
-    <form [formGroup]="ComputadorForm" (ngSubmit)="EventValue()">  
+    <form [formGroup]="ComputadorForm" (ngSubmit)="this[EventValue]()">  
+        
         <h3>Cadastrar Computador</h3>  
         <div class="row">  
         <table class="table"> 
@@ -386,9 +387,9 @@
         <tr>  
           <td>MarcaHD</td>  
           <td>  
-            <input type="text" formControlName="MarcaHD">  
-            <div *ngIf="submitted && ComputadorForm.controls.MarcaHD.errors" class="text-danger">  
-              <div *ngIf="ComputadorForm.controls.MarcaHD.errors.required">O MarcaHD é obrigatório</div>  
+            <input type="text" formControlName="marcaHD">  
+            <div *ngIf="submitted && ComputadorForm.controls.marcaHD.errors" class="text-danger">  
+              <div *ngIf="ComputadorForm.controls.marcaHD.errors.required">O MarcaHD é obrigatório</div>  
             </div>  
           </td>  
         </tr> 
@@ -396,9 +397,9 @@
         <tr>  
           <td>VelocidadeProcessador</td>  
           <td>  
-            <input type="text" formControlName="VelocidadeProcessador">  
-            <div *ngIf="submitted && ComputadorForm.controls.VelocidadeProcessador.errors" class="text-danger">  
-              <div *ngIf="ComputadorForm.controls.VelocidadeProcessador.errors.required">O VelocidadeProcessador é obrigatório</div>  
+            <input type="text" formControlName="velocidadeProcessador">  
+            <div *ngIf="submitted && ComputadorForm.controls.velocidadeProcessador.errors" class="text-danger">  
+              <div *ngIf="ComputadorForm.controls.velocidadeProcessador.errors.required">O VelocidadeProcessador é obrigatório</div>  
             </div>  
           </td>  
         </tr> 
@@ -406,9 +407,9 @@
         <tr>  
           <td>Foto</td>  
           <td>  
-            <input type="text" formControlName="Foto">  
-            <div *ngIf="submitted && ComputadorForm.controls.Foto.errors" class="text-danger">  
-              <div *ngIf="ComputadorForm.controls.Foto.errors.required">O Foto é obrigatório</div>  
+            <input type="text" formControlName="foto">  
+            <div *ngIf="submitted && ComputadorForm.controls.foto.errors" class="text-danger">  
+              <div *ngIf="ComputadorForm.controls.foto.errors.required">O Foto é obrigatório</div>  
             </div>  
           </td>  
         </tr> 
@@ -423,6 +424,7 @@
      </div>  
      <div class="row">  
       <table class="table table-striped">  
+
         <tr>  
           <td>ID</td>  
           <td>Marca</td>  
@@ -433,22 +435,24 @@
           <td>MarcaHD</td>  
           <td>VelocidadeProcessador</td>  
           <td>Foto</td>  
-          <td>Edita</td>  
-          <td>Deleta</td>  
+          <td>Editar</td>  
+          <td>Deletar</td>  
         </tr>  
+
         <tr *ngFor="let d of data">  
-          <td>{{d.ComputadorId}}</td>  
-          <td>{{d.Marca}}</td>  
-          <td>{{d.Modelo}}</td>  
-          <td>{{d.PlacaMae}}</td>  
-          <td>{{d.MemoriaRAM}}</td>  
-          <td>{{d.HD}}</td>  
-          <td>{{d.MarcaHD}}</td>  
-          <td>{{d.VelocidadeProcessador}}</td>  
-          <td>{{d.Foto}}</td>  
-          <td><a (click)="EditData(d)" class="btn btn-warning">Edita</a></td>  
-          <td><a (click)="deleteData(d.ComputadorId)" class="btn btn-danger">Deleta</a></td>    
+          <td>{{d.computadorId}}</td>  
+          <td>{{d.marca}}</td>  
+          <td>{{d.modelo}}</td>  
+          <td>{{d.placaMae}}</td>  
+          <td>{{d.memoriaRAM}}</td>  
+          <td>{{d.hd}}</td>  
+          <td>{{d.marcaHD}}</td>  
+          <td>{{d.velocidadeProcessador}}</td>  
+          <td>{{d.foto}}</td>  
+          <td><a (click)="EditData(d)" class="btn btn-warning">Editar</a></td>  
+          <td><a (click)="deleteData(d.ComputadorId)" class="btn btn-danger">Deletar</a></td>    
         </tr>  
+
       </table>  
     </div>  
    </form>      

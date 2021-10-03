@@ -11,6 +11,7 @@ namespace AdmComputadores.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class ComputadoresController : ControllerBase
     {
         private readonly AppDbContext _context;

@@ -12,17 +12,7 @@ export class AppComponent {
   constructor(private AppService: AppService) { }  
   data: any;  
 
-  ComputadorForm = new FormGroup({  
-    ComputadorId: new FormControl(null),  
-    Marca: new FormControl("",[Validators.required]),        
-    Modelo: new FormControl("",[Validators.required]),  
-    PlacaMae:new FormControl("",[Validators.required]),  
-    MemoriaRAM: new FormControl("",[Validators.required]),  
-    HD: new FormControl("",[Validators.required]),
-    MarcaHD: new FormControl("",[Validators.required]),
-    VelocidadeProcessador: new FormControl("",[Validators.required]),
-    Foto: new FormControl("",[Validators.required]),
-  })    
+  ComputadorForm: FormGroup;   
    
   submitted = false;   
   EventValue: any = "Salvar";  
@@ -44,13 +34,13 @@ export class AppComponent {
   }  
 
   getdata() {  
-    this.AppService.getData().subscribe((data) => {  
+    this.AppService.getData().subscribe((data: any[]) => {  
       this.data = data;  
     })  
   }  
 
   deleteData(id: number) {  
-    this.AppService.deleteData(id).subscribe((data) => {  
+    this.AppService.deleteData(id).subscribe((data: any[]) => {  
       this.data = data;  
       this.getdata();  
     })  
@@ -66,6 +56,7 @@ export class AppComponent {
       this.resetFrom();   
     })  
   }  
+
   Update() {   
     this.submitted = true;      
     if (this.ComputadorForm.invalid) {  

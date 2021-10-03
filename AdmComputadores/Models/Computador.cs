@@ -39,6 +39,6 @@ namespace AdmComputadores.Models
 
         [Required]
         [Column(TypeName = "varchar(60)")]
-        public string Foto;
+        public string Foto { get; set; }
     }
 }
