@@ -46,7 +46,7 @@ export class AppComponent {
     })  
   }  
 
-  Save() {   
+  Salvar() {   
     this.submitted = true;      
      if (this.ComputadorForm.invalid) {  
             return;  
@@ -57,7 +57,7 @@ export class AppComponent {
     })  
   }  
 
-  Update() {   
+  Atualizar() {   
     this.submitted = true;      
     if (this.ComputadorForm.invalid) {  
      return;  
@@ -70,15 +70,15 @@ export class AppComponent {
   }  
   
   EditData(Data) {  
-    this.ComputadorForm.controls["ComputadorId"].setValue(Data.ComputadorId);  
-    this.ComputadorForm.controls["Marca"].setValue(Data.Marca);      
-    this.ComputadorForm.controls["Modelo"].setValue(Data.Modelo);  
-    this.ComputadorForm.controls["PlacaMae"].setValue(Data.PlacaMae);  
-    this.ComputadorForm.controls["MemoriaRAM"].setValue(Data.MemoriaRAM); 
-    this.ComputadorForm.controls["HD"].setValue(Data.HD);
-    this.ComputadorForm.controls["MarcaHD"].setValue(Data.MarcaHD);  
-    this.ComputadorForm.controls["VelocidadeProcessador"].setValue(Data.VelocidadeProcessador);  
-    this.ComputadorForm.controls["Foto"].setValue(Data.Foto); 
+    this.ComputadorForm.controls["ComputadorId"].setValue(Data.computadorId);  
+    this.ComputadorForm.controls["Marca"].setValue(Data.marca);      
+    this.ComputadorForm.controls["Modelo"].setValue(Data.modelo);  
+    this.ComputadorForm.controls["PlacaMae"].setValue(Data.placaMae);  
+    this.ComputadorForm.controls["MemoriaRAM"].setValue(Data.memoriaRAM); 
+    this.ComputadorForm.controls["HD"].setValue(Data.hd);
+    this.ComputadorForm.controls["MarcaHD"].setValue(Data.marcaHD);  
+    this.ComputadorForm.controls["VelocidadeProcessador"].setValue(Data.velocidadeProcessador);  
+    this.ComputadorForm.controls["Foto"].setValue(Data.foto); 
     this.EventValue = "Atualizar";  
   }    
   
