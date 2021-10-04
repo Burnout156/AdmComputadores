@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdmComputadores.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211002234223_inicial")]
+    [Migration("20211004171241_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,7 +29,7 @@ namespace AdmComputadores.Migrations
 
                     b.Property<string>("Foto")
                         .IsRequired()
-                        .HasColumnType("varchar(60)");
+                        .HasColumnType("varchar(max)");
 
                     b.Property<string>("HD")
                         .IsRequired()

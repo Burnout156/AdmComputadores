@@ -19,7 +19,7 @@ namespace AdmComputadores.Migrations
                     HD = table.Column<string>(type: "varchar(30)", nullable: false),
                     MarcaHD = table.Column<string>(type: "varchar(30)", nullable: false),
                     VelocidadeProcessador = table.Column<string>(type: "varchar(30)", nullable: false),
-                    Foto = table.Column<string>(type: "varchar(60)", nullable: false)
+                    Foto = table.Column<string>(type: "varchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

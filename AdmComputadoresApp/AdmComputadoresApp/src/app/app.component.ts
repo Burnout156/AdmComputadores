@@ -38,6 +38,7 @@ export class AppComponent implements DoCheck {
     this._changeRef.markForCheck();
   }
 
+
   getdata() {  
     this.AppService.getData().subscribe((data: Computador[]) => {  
      
@@ -86,7 +87,7 @@ export class AppComponent implements DoCheck {
     this.ComputadorForm.controls["HD"].setValue(Data.hd);
     this.ComputadorForm.controls["MarcaHD"].setValue(Data.marcaHD);  
     this.ComputadorForm.controls["VelocidadeProcessador"].setValue(Data.velocidadeProcessador);  
-    this.ComputadorForm.controls["Foto"].setValue(Data.foto); 
+    //this.ComputadorForm.controls["Foto"].setValue(Data.foto); 
     this.EventValue = "Atualizar";  
   }    
   

@@ -27,7 +27,7 @@ namespace AdmComputadores.Migrations
 
                     b.Property<string>("Foto")
                         .IsRequired()
-                        .HasColumnType("varchar(60)");
+                        .HasColumnType("varchar(max)");
 
                     b.Property<string>("HD")
                         .IsRequired()

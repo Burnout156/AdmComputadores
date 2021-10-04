@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AdmComputadores.Models;
+using System.IO;
 
 namespace AdmComputadores.Controllers
 {
@@ -78,7 +79,8 @@ namespace AdmComputadores.Controllers
         [HttpPost]
         public async Task<ActionResult<ComputadorDTO>> PostComputador(ComputadorDTO computador)
         {
-            Computador comp = new Computador(computador);           
+            Computador comp = new Computador(computador);
+
             _context.Computadores.Add(comp);
             await _context.SaveChangesAsync();
 
