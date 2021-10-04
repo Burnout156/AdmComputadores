@@ -76,12 +76,13 @@ namespace AdmComputadores.Controllers
         // POST: api/Computadores
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Computador>> PostComputador(Computador computador)
+        public async Task<ActionResult<ComputadorDTO>> PostComputador(ComputadorDTO computador)
         {
-            _context.Computadores.Add(computador);
+            Computador comp = new Computador(computador);           
+            _context.Computadores.Add(comp);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetComputador", new { id = computador.ComputadorId }, computador);
+            return Ok();
         }
 
         // DELETE: api/Computadores/5

@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, DoCheck } from '@angular/core';
 import {AppService} from './app.service';  
 import { FormGroup, FormControl,Validators } from '@angular/forms';
+import { Computador } from './model/computador.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements DoCheck {
   title = 'Computadores';
 
-  constructor(private AppService: AppService) { }  
-  data: any;  
+  constructor(private AppService: AppService, private _changeRef: ChangeDetectorRef) { }  
+  data: Computador[] = [];  
 
   ComputadorForm: FormGroup;   
    
@@ -33,8 +34,13 @@ export class AppComponent {
     })    
   }  
 
+  ngDoCheck() {
+    this._changeRef.markForCheck();
+  }
+
   getdata() {  
-    this.AppService.getData().subscribe((data: any[]) => {  
+    this.AppService.getData().subscribe((data: Computador[]) => {  
+     
       this.data = data;  
     })  
   }  
@@ -50,9 +56,11 @@ export class AppComponent {
     this.submitted = true;      
      if (this.ComputadorForm.invalid) {  
             return;  
-     }  
-    this.AppService.postData(this.ComputadorForm.value).subscribe((data: any[]) => {  
-      this.data = data;  
+     } 
+  
+    this.AppService.postData(this.ComputadorForm.value).subscribe((data: Computador[]) => {  
+      //this.data = data;
+      //this.getdata();  
       this.resetFrom();   
     })  
   }  

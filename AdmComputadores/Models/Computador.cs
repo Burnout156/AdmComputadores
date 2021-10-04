@@ -40,5 +40,22 @@ namespace AdmComputadores.Models
         [Required]
         [Column(TypeName = "varchar(60)")]
         public string Foto { get; set; }
+
+        public Computador()
+        {
+            
+        }
+
+        public Computador(ComputadorDTO dTO)
+        {
+            Marca = dTO.Marca;
+            Modelo = dTO.Modelo;
+            PlacaMae = dTO.PlacaMae;
+            MemoriaRAM = dTO.MemoriaRAM;
+            HD = dTO.HD;
+            MarcaHD = dTO.MarcaHD;
+            VelocidadeProcessador = dTO.VelocidadeProcessador;
+            Foto = dTO.Foto;               
+        }
     }
 }

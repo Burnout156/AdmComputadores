@@ -15,7 +15,9 @@ export class AppService
       {  
         headers: new HttpHeaders(
         {  
-          'Content-Type': 'application/json'  
+          'Content-Type': 'application/json',  
+          'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT',
+          'Access-Control-Allow-Origin': '*'
         })  
       }    
 
