@@ -7097,23 +7097,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bruno\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\burno\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\AdmComputadores\\AdmComputadores\\AdmComputadores.csproj",
+      "projectUniqueName": "E:\\Projetos\\AdmComputadores-master\\AdmComputadores\\AdmComputadores.csproj",
       "projectName": "AdmComputadores",
-      "projectPath": "D:\\Projetos\\AdmComputadores\\AdmComputadores\\AdmComputadores.csproj",
-      "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\AdmComputadores\\AdmComputadores\\obj\\",
+      "projectPath": "E:\\Projetos\\AdmComputadores-master\\AdmComputadores\\AdmComputadores.csproj",
+      "packagesPath": "C:\\Users\\burno\\.nuget\\packages\\",
+      "outputPath": "E:\\Projetos\\AdmComputadores-master\\AdmComputadores\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\burno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7176,7 +7172,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }
