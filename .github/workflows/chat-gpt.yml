@@ -2,6 +2,12 @@ on: [push, pull_request]
 
 name: ChatGPT CodeReview
 
+permissions:
+  contents: write
+  pull-requests: write 
+  issues: read
+  packages: none
+
 jobs:
   chatgpt_comment:
     runs-on: ubuntu-latest
