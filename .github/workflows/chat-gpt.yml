@@ -21,4 +21,4 @@ jobs:
           sessionToken: ${{ secrets.CHATGPT_SESSION_TOKEN }}
           split: 'yolo'  # Use true to enable the unstable split feature.
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: 'ZNzFSmngNe5kby0ouZ6RzH.BIUauXwWfJKF0LCV33BY-1674755957-0-1-cb0b2fc.af09c18e.f7f3874-160'
