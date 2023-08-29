@@ -1,0 +1,5 @@
+﻿dotnet tool install --global dotnet-sonarscanner
+
+dotnet build
+
+dotnet sonarscanner end /d:sonar.login="sqp_5e706dc8fdc9422ace8a0c307b61d0a3df2b9813"

@@ -1,0 +1,14 @@
+﻿E:\Projetos\AdmComputadores\AdmComputadores\Controllers\ComputadoresController.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Migrations\20211004171241_inicial.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Migrations\20211004171241_inicial.Designer.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Migrations\AppDbContextModelSnapshot.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Models\AppDbContext.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Models\Computador.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Models\ComputadorDTO.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Program.cs
+E:\Projetos\AdmComputadores\AdmComputadores\Startup.cs
+E:\Projetos\AdmComputadores\AdmComputadores\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
+E:\Projetos\AdmComputadores\AdmComputadores\obj\Debug\net5.0\AdmComputadores.AssemblyInfo.cs
+E:\Projetos\AdmComputadores\AdmComputadores\appsettings.Development.json
+E:\Projetos\AdmComputadores\AdmComputadores\appsettings.json
+E:\Projetos\AdmComputadores\AdmComputadores\Properties\launchSettings.json
