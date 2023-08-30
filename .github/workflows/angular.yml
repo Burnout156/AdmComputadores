@@ -34,7 +34,7 @@ jobs:
           echo "Build failed!"
           exit 1
         fi
-      working-directory: AdmComputadoresApp/AdmComputadoresApp/src  # Adjust the directory path
+      working-directory: AdmComputadoresApp/AdmComputadoresApp  # Adjust the directory path
 
   codeql-analysis:
     needs: build
