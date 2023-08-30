@@ -1,4 +1,4 @@
-using AdmComputadores.Models;
+using BibliotecaADMComputadores.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,9 +27,13 @@ namespace AdmComputadores
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(optionns =>
-            optionns.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
+            /*services.AddDbContext<AppDbContext>(optionns =>
+            optionns.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));*/
+
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                    b => b.MigrationsAssembly("AdmComputadores")));
+
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",

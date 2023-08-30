@@ -81,7 +81,7 @@
         <tr>
           <td>Foto</td>
           <td>
-            <input type="file" formControlName="Foto" >
+            <input type="file" formControlName="Foto" (change)="handleFileInput($event)">
             <div *ngIf="submitted && ComputadorForm.controls.Foto.errors" class="text-danger">
               <div *ngIf="ComputadorForm.controls.Foto.errors.required">A Foto é obrigatória</div>
             </div>
@@ -128,7 +128,7 @@
           <td>{{d.hd}}</td>
           <td>{{d.marcaHD}}</td>
           <td>{{d.velocidadeProcessador}}</td>
-          <td><img src = "{{d.foto}}"></td>   <!--{{d.foto}} -->
+          <td><img src = "{{d.foto}}" style="width: 100px; height: 100px;"></td>   <!--{{d.foto}} -->
           <td><a (click)="EditData(d)" class="btn btn-warning">Editar</a></td>
           <td><a (click)="deleteData(d.computadorId)" class="btn btn-danger">Deletar</a></td>
         </tr>

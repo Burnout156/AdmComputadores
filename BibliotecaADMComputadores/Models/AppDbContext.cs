@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-
-namespace AdmComputadores.Models
+namespace BibliotecaADMComputadores.Models
 {
     public class AppDbContext : DbContext
     {

@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace AdmComputadores.Migrations
 {
-    public partial class inicial : Migration
+    public partial class Migracao1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -2,6 +2,8 @@ import { ChangeDetectorRef, Component, DoCheck } from '@angular/core';
 import {AppService} from './app.service';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
 import { Computador } from './model/computador.model';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,6 +19,7 @@ export class AppComponent implements DoCheck {
 
   submitted = false;
   EventValue: any = "Salvar";
+  base64Image: string | undefined;
 
   ngOnInit(): void {
     this.getdata();
@@ -60,6 +63,8 @@ export class AppComponent implements DoCheck {
             return;
      }
 
+     this.ComputadorForm.value.Foto = this.base64Image;
+
     this.AppService.postData(this.ComputadorForm.value).subscribe((data: Computador[]) => {
       this.resetFrom();
     })
@@ -98,5 +103,17 @@ export class AppComponent implements DoCheck {
     this.ComputadorForm.reset();
     this.EventValue = "Salvar";
     this.submitted = false;
+  }
+
+  handleFileInput(event: any): void {
+    debugger;
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.base64Image = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
   }
 }
