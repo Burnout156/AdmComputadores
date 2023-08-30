@@ -35,3 +35,22 @@ jobs:
           exit 1
         fi
       working-directory: AdmComputadoresApp/AdmComputadoresApp/src  # Adjust the directory path
+
+  codeql-analysis:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+
+    - name: Autobuild CodeQL database
+      uses: github/codeql-action/autobuild@v1
+      with:
+        languages: javascript
+        overwrite: true
+
+    - name: Perform CodeQL analysis
+      uses: github/codeql-action/analyze@v1
