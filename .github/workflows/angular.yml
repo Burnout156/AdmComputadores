@@ -20,11 +20,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./AdmComputadores/AdmComputadoresApp/AdmComputadoresApp  # Adjust the directory path
+      working-directory: AdmComputadores/AdmComputadoresApp/AdmComputadoresApp/src  # Adjust the directory path
 
     - name: Build Angular app
       run: npm run build -- --prod
-      working-directory: AdmComputadores/AdmComputadoresApp/AdmComputadoresApp  # Adjust the directory path
+      working-directory: AdmComputadores/AdmComputadoresApp/AdmComputadoresApp/src  # Adjust the directory path
 
     - name: Check if build succeeded
       run: |
@@ -34,4 +34,4 @@ jobs:
           echo "Build failed!"
           exit 1
         fi
-      working-directory: AdmComputadores/AdmComputadoresApp/AdmComputadoresApp  # Adjust the directory path
+      working-directory: AdmComputadores/AdmComputadoresApp/AdmComputadoresApp/src  # Adjust the directory path
