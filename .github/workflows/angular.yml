@@ -28,7 +28,7 @@ jobs:
 
     - name: Check if build succeeded
       run: |
-        if [ -d "AdmComputadoresApp/AdmComputadoresApp/dist" ]; then
+        if [ -d "dist" ]; then
           echo "Build succeeded!"
         else
           echo "Build failed!"
