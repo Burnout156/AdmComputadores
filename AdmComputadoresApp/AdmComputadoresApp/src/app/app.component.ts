@@ -93,6 +93,8 @@ export class AppComponent implements DoCheck {
     this.ComputadorForm.controls["HD"].setValue(Data.hd);
     this.ComputadorForm.controls["MarcaHD"].setValue(Data.marcaHD);
     this.ComputadorForm.controls["VelocidadeProcessador"].setValue(Data.velocidadeProcessador);
+    Data.foto = this.base64Image;
+    this.ComputadorForm.controls["Foto"].setValue(Data.foto);
     //this.ComputadorForm.controls["Foto"].setValue(Data.foto);
     this.EventValue = "Atualizar";
   }

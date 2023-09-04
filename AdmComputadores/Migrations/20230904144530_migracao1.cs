@@ -4,7 +4,7 @@
 
 namespace AdmComputadores.Migrations
 {
-    public partial class Migracao1 : Migration
+    public partial class migracao1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
