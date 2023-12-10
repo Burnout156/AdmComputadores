@@ -3,7 +3,6 @@ import { ChangeDetectorRef, Component, DoCheck } from '@angular/core';
 import { Computador } from './model/computador.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppService } from './app.service';
-import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -11,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [AppService],
-  standalone: true
+  standalone: true,
 })
 export class AppComponent implements DoCheck {
   title = 'Computadores';
