@@ -3,10 +3,10 @@ import { ChangeDetectorRef, Component, DoCheck } from '@angular/core';
 import { Computador } from './model/computador.model';
 import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { AppService } from './app.service';
-import { bootstrapApplication } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { bootstrapApplication } from '@angular/platform-browser';
+
 
 
 @Component({

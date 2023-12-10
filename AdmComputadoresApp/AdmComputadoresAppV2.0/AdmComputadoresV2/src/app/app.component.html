@@ -6,13 +6,13 @@
 
         <h3>Cadastrar Computador</h3>
         <div class="row">
-        <table class="table">
+        <table class="table" class="form-group">
 
           <tr>
             <td>Marca</td>
             <td>
               <input type="hidden" formControlName="ComputadorId">
-              <input type="text" formControlName="Marca">
+              <input type="text" class="form-control w-50 bg-primary" formControlName="Marca">
               <div *ngIf="submitted && ComputadorForm.get('Marca')?.hasError('required')" class="text-danger">
                 A Marca é obrigatória
               </div>
@@ -22,7 +22,7 @@
           <tr>
             <td>Modelo</td>
             <td>
-              <input type="text" formControlName="Modelo">
+              <input type="text" class="form-control w-50 bg-primary" formControlName="Modelo">
               <div *ngIf="submitted && ComputadorForm.get('Modelo')?.hasError('required')" class="text-danger">
                 O Modelo é obrigatório
               </div>
@@ -32,7 +32,7 @@
           <tr>
             <td>PlacaMae</td>
             <td>
-              <input type="text" formControlName="PlacaMae">
+              <input type="text" class="form-control w-50 bg-primary" formControlName="PlacaMae">
               <div *ngIf="submitted && ComputadorForm.get('PlacaMae')?.hasError('required')" class="text-danger">
                 A Placa Mãe é obrigatória
               </div>
@@ -42,7 +42,7 @@
           <tr>
             <td>MemoriaRAM</td>
             <td>
-              <input type="text" formControlName="MemoriaRAM">
+              <input type="text" class="form-control w-50 bg-primary" formControlName="MemoriaRAM">
               <div *ngIf="submitted && ComputadorForm.get('MemoriaRAM')?.hasError('required')" class="text-danger">
                 A MemoriaRAM é obrigatória
               </div>
@@ -53,7 +53,7 @@
         <tr>
           <td>HD</td>
           <td>
-            <input type="text" formControlName="HD">
+            <input type="text" class="form-control w-50 bg-primary" formControlName="HD">
             <div *ngIf="submitted && ComputadorForm.get('HD')?.hasError('required')" class="text-danger">
               O HD é obrigatório
             </div>
@@ -64,7 +64,7 @@
         <tr>
           <td>MarcaHD</td>
           <td>
-            <input type="text" formControlName="MarcaHD">
+            <input type="text" class="form-control w-50 bg-primary" formControlName="MarcaHD">
             <div *ngIf="submitted && ComputadorForm.get('MarcaHD')?.hasError('required')" class="text-danger">
               A Marca do HD é obrigatória
             </div>
@@ -75,7 +75,7 @@
         <tr>
           <td>VelocidadeProcessador</td>
           <td>
-            <input type="text" formControlName="VelocidadeProcessador">
+            <input type="text" class="form-control w-50 bg-primary" formControlName="VelocidadeProcessador">
             <div *ngIf="submitted && ComputadorForm.controls['VelocidadeProcessador'].errors" class="text-danger">
               <div *ngIf="ComputadorForm.controls['VelocidadeProcessador'].errors['required']">Velocidade do Processador é obrigatória</div>
             </div>
@@ -85,7 +85,7 @@
         <tr>
           <td>Foto</td>
           <td>
-            <input type="file" formControlName="Foto" (change)="handleFileInput($event)">
+            <input type="file" class="form-control w-50" formControlName="Foto" (change)="handleFileInput($event)">
             <div *ngIf="submitted && ComputadorForm.get('Foto')?.hasError('required')" class="text-danger">
               A Foto é obrigatória
             </div>

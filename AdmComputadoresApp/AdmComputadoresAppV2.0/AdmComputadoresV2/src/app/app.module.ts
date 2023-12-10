@@ -1,11 +1,10 @@
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ApplicationRef, DoBootstrap, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppService } from './app.service';
-import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -14,15 +13,19 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbPaginationModule,
-    NgbAlertModule,
     CommonModule
   ],
   providers: [AppService]
 })
-export class AppModule {
+export class AppModule implements DoBootstrap {
   constructor(){
     bootstrapApplication(AppComponent)
+    withFetch()
+    provideHttpClient()
+    this.ngDoBootstrap
+  }
+  ngDoBootstrap(appRef: ApplicationRef): void {
+    appRef.bootstrap(AppComponent);
   }
 }
 
