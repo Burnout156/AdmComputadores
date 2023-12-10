@@ -5,6 +5,8 @@ import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } 
 import { AppService } from './app.service';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @Component({
@@ -13,12 +15,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss',
   providers: [AppService],
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule]
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, HttpClientModule]
 })
 export class AppComponent implements DoCheck {
   title = 'Computadores';
 
-  constructor(private appService: AppService, private _changeRef: ChangeDetectorRef) {}
+  constructor(private appService: AppService, private _changeRef: ChangeDetectorRef) { }
 
   data: Computador[] = [];
 

@@ -20,5 +20,9 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [AppService]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(){
+    bootstrapApplication(AppComponent)
+  }
+}
 
