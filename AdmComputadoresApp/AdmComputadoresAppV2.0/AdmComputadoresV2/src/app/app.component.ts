@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, DoCheck } from '@angular/core';
 // Remova os imports relativos a CommonModule, RouterOutlet, ReactiveFormsModule
 import { Computador } from './model/computador.model';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { AppService } from './app.service';
 
 
@@ -11,6 +11,7 @@ import { AppService } from './app.service';
   styleUrl: './app.component.scss',
   providers: [AppService],
   standalone: true,
+  imports: [FormsModule, ReactiveFormsModule]
 })
 export class AppComponent implements DoCheck {
   title = 'Computadores';
