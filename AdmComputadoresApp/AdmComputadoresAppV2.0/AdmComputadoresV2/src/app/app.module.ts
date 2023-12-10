@@ -6,6 +6,7 @@ import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } 
 import { HttpClientModule } from '@angular/common/http';
 import { AppService } from './app.service';
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -14,12 +15,10 @@ import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
     ReactiveFormsModule,
     FormsModule,
     NgbPaginationModule,
-    NgbAlertModule
+    NgbAlertModule,
+    CommonModule
   ],
   providers: [AppService]
 })
-export class AppModule {
-  constructor() {
-    //bootstrapApplication(AppComponent);
-  }
-}
+export class AppModule {}
+
