@@ -3,6 +3,7 @@ import { ChangeDetectorRef, Component, DoCheck } from '@angular/core';
 import { Computador } from './model/computador.model';
 import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { AppService } from './app.service';
+import { bootstrapApplication } from '@angular/platform-browser';
 
 
 @Component({
@@ -16,7 +17,8 @@ import { AppService } from './app.service';
 export class AppComponent implements DoCheck {
   title = 'Computadores';
 
-  constructor(private appService: AppService, private _changeRef: ChangeDetectorRef) { }
+  constructor(private appService: AppService, private _changeRef: ChangeDetectorRef) {}
+  
   data: Computador[] = [];
 
   ComputadorForm!: FormGroup;
