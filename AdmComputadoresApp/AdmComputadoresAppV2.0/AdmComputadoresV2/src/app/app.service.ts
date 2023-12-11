@@ -10,7 +10,9 @@ export class AppService
 
   readonly rootURL = 'https://localhost:44329/api';
 
-  constructor(private http: HttpClient) { }   
+  constructor(private http: HttpClient) { 
+    this.rootURL = 'https://localhost:44329/api';
+  }   
       httpOptions = 
       {  
         headers: new HttpHeaders(

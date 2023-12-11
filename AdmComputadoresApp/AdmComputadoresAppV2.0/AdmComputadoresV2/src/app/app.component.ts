@@ -1,22 +1,27 @@
 import { ChangeDetectorRef, Component, DoCheck } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+// Remova os imports relativos a CommonModule, RouterOutlet, ReactiveFormsModule
 import { Computador } from './model/computador.model';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { AppService } from './app.service';
-import { SharedModuleModule } from './shared-module/shared-module.module';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { bootstrapApplication } from '@angular/platform-browser';
+
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, ReactiveFormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers: [AppService],
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, HttpClientModule]
 })
 export class AppComponent implements DoCheck {
   title = 'Computadores';
 
   constructor(private appService: AppService, private _changeRef: ChangeDetectorRef) { }
+
   data: Computador[] = [];
 
   ComputadorForm!: FormGroup;

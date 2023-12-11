@@ -1,21 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { ApplicationRef, DoBootstrap, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';  // Importe o HttpClientModule
+import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppService } from './app.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
-  providers: [AppService],
-  bootstrap: [AppComponent]
+  providers: [AppService]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap {
+  constructor(){
+    bootstrapApplication(AppComponent)
+    withFetch()
+    provideHttpClient()
+    this.ngDoBootstrap
+  }
+  ngDoBootstrap(appRef: ApplicationRef): void {
+    appRef.bootstrap(AppComponent);
+  }
+}
+
