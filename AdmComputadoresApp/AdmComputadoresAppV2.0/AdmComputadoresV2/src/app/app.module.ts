@@ -1,5 +1,5 @@
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { ApplicationRef, DoBootstrap, NgModule } from '@angular/core';
+import { ApplicationRef, DoBootstrap, NgModule, importProvidersFrom } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormControl, Validators, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule
   ],
-  providers: [AppService]
+  providers: [AppService, importProvidersFrom(HttpClientModule)]
 })
 export class AppModule implements DoBootstrap {
   constructor(){
